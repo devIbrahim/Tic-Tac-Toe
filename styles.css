@@ -1,0 +1,121 @@
+body{
+    padding:0;
+    margin:0; 
+}
+#title{
+    font-family: 'Fjalla One', sans-serif;
+    margin:70px;
+    padding:0;
+    text-align: center;
+    font-size:70px;
+
+}
+#start-game-btn{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:150px;
+    height:60px;
+    margin-top:-30px;
+    font-size:18px;
+}
+#game-container{
+    width:400px;
+    height:400px;
+    grid-template-columns: auto auto auto;
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    display:none;
+    
+}
+#whosTheWinner{
+   font-size:6em;
+   position: absolute;
+   top:40%;left:50%;
+   transform: translate(-50%,-50%);
+   font-family: 'Fjalla One', sans-serif;
+}
+#play-again-btn{
+    width:150px;
+    height:60px;
+    font-size:18px;
+    display:none;
+    position: absolute;
+    top:52%;left:50%;
+    transform: translate(-50%,-50%);
+}
+.boxes{
+    border:1px solid #000;
+}
+.boxes:hover{
+    cursor: pointer;
+}
+#box-1, #box-4, #box-7{
+    border-left:none;
+}
+#box-1, #box-2, #box-3{
+    border-top:none;
+}
+#box-3, #box-6, #box-9{
+    border-right:none;
+}
+#box-7, #box-8, #box-9{
+    border-bottom:none;
+}  
+.boxes.x:hover{
+    background-image: url('cross.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 40%;
+}
+.boxes.circle:hover{
+    background-image: url('circle.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 40%;
+}
+.boxes.x.clicked{
+    background-image: url('cross.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+.boxes.circle.clicked{
+    background-image: url('circle.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 771px) {
+    #whosTheWinner{
+        font-size:60px;
+        padding:0;
+        margin:30px 0 0 0;
+     }
+}
+
+footer{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    padding-bottom:20px;
+    text-align: center;
+    font-family: 'Economica', sans-serif;
+    font-size:30px;
+}
+footer i{
+    font-weight: bold;
+    font-style: normal;
+}
+footer a,
+footer a:hover{
+    color:#000;
+}
